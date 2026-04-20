@@ -10,7 +10,6 @@ function App() {
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
-    // Check if user is logged in
     const token = localStorage.getItem('token')
     const userData = localStorage.getItem('user')
     if (token && userData) {
@@ -25,10 +24,10 @@ function App() {
     setUser(null)
   }
 
+
   if (loading) {
     return <div className="container"><p>Loading...</p></div>
   }
-
   return (
     <div className="app">
       {user ? (
